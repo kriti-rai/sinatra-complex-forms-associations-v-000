@@ -1,5 +1,5 @@
-<% @pets.each do |pet| %>
-<ul>
-<li><%=pet.name%></li>
-</ul>
+<% @pets.each.with_index(1) do |pet,i| %>
+
+"#{i}"<%=pet.name%>
+
 <% end %>
