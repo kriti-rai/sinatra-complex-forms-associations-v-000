@@ -31,7 +31,7 @@ class OwnersController < ApplicationController
   end
 
   post '/owners/:id' do
-    @owner = Owner.create(params[:owner])
+    @owner = Owner.find_by(params[:owner])
     if !params["pet"]["name"].empty?
       @owner.pets << Pet.create(name: params["pet"]["name"])
     end
