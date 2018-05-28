@@ -28,9 +28,9 @@ class PetsController < ApplicationController
   get '/pets/:id/edit' do
     erb: '/pets/edit'
   end
-  
+
   post '/pets/:id' do
-    @pet = Pet.find_by(params[:pet])
+    @pet = Pet.find(params[:id])
     if !params["owner"]["name"].empty?
       @pet.owner = Owner.create(name: params["owner"]["name"])
     end
