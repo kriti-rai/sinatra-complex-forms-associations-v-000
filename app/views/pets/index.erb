@@ -1,1 +1,3 @@
-"hello"
+<% @pets.all do |pet| %>
+  <p><%=pet.name%></p>
+<% end %>
