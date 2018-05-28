@@ -10,7 +10,6 @@
   <br></br>
 
   <%@owners.each do |owner|%>
-    <label>Name:</label>
     <input type="checkbox" name="owner[name]" value="<%=owner.id%>" id="<%=owner.id%>"><%=owner.name%></input>
   <%end%>
 
@@ -19,6 +18,7 @@
   <label>and/or, create a new owner:</label>
 
   <br></br>
+  <label for="owner[name]">
 
   <input type="text" name="owner[name]"></input>
 
